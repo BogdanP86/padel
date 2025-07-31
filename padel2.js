@@ -95,10 +95,10 @@ const login = async (email, password) => {
 }
 
 const main = async () => {
-    console.log('Starting appointment booking...');
+    console.log('Starting appointment booking padel 2...');
     try {
         const cookies = await login('preda.bogdan86@gmail.com', 'Master2x1986');
-        await getAvailalbeAppointments(cookies, service_id_list.paddel1);
+        await getAvailalbeAppointments(cookies, service_id_list.paddel2);
     }
     catch (er) {
         console.log('Error', er)
