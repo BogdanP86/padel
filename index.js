@@ -21,7 +21,7 @@ const getAvailalbeAppointments =  async(cookies, service_id = 39707, daysAdded =
     for (item of jsonRes.available_slots) {
         date = new Date(item.time * 1000);
         const appTime = date.getHours();
-        console.log('Available time', appTime, 'date', date.getDate())
+        console.log('Available time', appTime, 'date', date.getDate(), 'time', item.time)
         if ([19, 20, 21].includes(appTime)) {
             await appointment(cookies, service_id, `${appTime}:00`, 21359, item.time);
         }
