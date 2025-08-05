@@ -19,4 +19,4 @@ jobs:
           node-version: 'latest'
 
       - name: Run appointment booking script
-        run: node padel2.js
+        run: sleep 45 && node padel2.js
