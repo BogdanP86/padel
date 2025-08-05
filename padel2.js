@@ -10,6 +10,9 @@ const getAvailalbeAppointments = async (cookies, service_id = 39707, daysAdded =
         await new Promise(resolve => setTimeout(resolve, 1000));
         return getAvailalbeAppointments(cookies, service_id = 39707, daysAdded)
     }
+    if (55 === currentMinute) {
+        return
+    }
     date.setDate(date.getDate() + daysAdded);
     date = Math.floor(date / 1000);
 
