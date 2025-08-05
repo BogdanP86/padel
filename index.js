@@ -3,8 +3,13 @@ const service_id_list = {
     paddel2: 39708
 }
 
-const getAvailalbeAppointments =  async(cookies, service_id = 39707, daysAdded = 14) => {
+const getAvailalbeAppointments = async (cookies, service_id = 39707, daysAdded = 14) => {
     let date = new Date();
+    const currentMinute = date.getMinutes()
+    if (currentMinute !== 55) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        return getAvailalbeAppointments(cookies, service_id = 39707, daysAdded)
+    }
     date.setDate(date.getDate() + daysAdded);
     date = Math.floor(date / 1000);
 
