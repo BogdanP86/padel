@@ -7,11 +7,11 @@ const getAvailalbeAppointments = async (cookies, service_id = 39707, daysAdded =
     let date = new Date();
     const currentMinute = date.getMinutes()
     console.log('Current minute', currentMinute)
-    if (currentMinute !== 55) {
+    if (currentMinute === 54) {
         await new Promise(resolve => setTimeout(resolve, 1000));
         return getAvailalbeAppointments(cookies, service_id = 39707, daysAdded)
     }
-    if (55 === currentMinute) {
+    if (currentMinute !== 55) {
         return
     }
 
