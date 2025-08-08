@@ -3,10 +3,9 @@ name: Daily Appointment Booking
 on:
   workflow_dispatch:
   schedule:
-    - cron: '54 14 * * *'
     - cron: '54 15 * * *'
     - cron: '54 16 * * *'
-    - cron: '49 7 * * *'
+    - cron: '54 17 * * *'
 
 jobs:
   run-script:
