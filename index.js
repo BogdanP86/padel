@@ -6,7 +6,7 @@ const service_id_list = {
 const getAvailalbeAppointments = async (cookies, service_id = 39707, daysAdded = 14) => {
     let date = new Date();
     const currentMinute = date.getMinutes()
-    console.log('Current minute', currentMinute)
+    console.log('Current minute', currentMinute, date)
     if (currentMinute === 54) {
         await new Promise(resolve => setTimeout(resolve, 1000));
         return getAvailalbeAppointments(cookies, service_id = 39707, daysAdded)
