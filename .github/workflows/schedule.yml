@@ -5,8 +5,7 @@ on:
     - cron: '54 14 * * *'
     - cron: '54 15 * * *'
     - cron: '54 16 * * *'
-    - cron: '42 6 * * *'
-    - cron: '42 5 * * *'
+    - cron: '46 6 * * *'
 
 jobs:
   run-script:
